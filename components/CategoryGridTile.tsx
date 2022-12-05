@@ -3,13 +3,15 @@ import { Platform, Pressable, StyleSheet, Text, View } from 'react-native'
 interface CategoryGridTileProps {
   categoryTitle: string;
   categoryColor: string;
+  onPress?: () => void;
 }
-export const CategoryGridTile = ({ categoryTitle, categoryColor }: CategoryGridTileProps) => {
+export const CategoryGridTile = ({ categoryTitle, categoryColor, onPress }: CategoryGridTileProps) => {
   return (
     <View style={styles.gridItem}>
       <Pressable
         android_ripple={{ color: "#ccc" }}
         style={({ pressed }) => [styles.button, pressed && styles.buttonPressed]}
+        onPress={onPress}
       >
         <View style={[styles.innerContainer, { backgroundColor: categoryColor }]}>
           <Text style={styles.title}>
