@@ -1,18 +1,14 @@
-import { useNavigation } from '@react-navigation/native';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { FlatList, StyleSheet } from 'react-native'
 import { CategoryGridTile } from '../components/CategoryGridTile'
 import { CATEGORIES } from '../mocks/dummy-data'
-import { RootStackParamList } from '../types';
+import { PropNav } from '../types';
 
-
-type PropNav = NativeStackScreenProps<RootStackParamList, "CategoriesScreen", "MealsOverViewScreen">;
 
 export const CategoriesScreen = ({ navigation }: PropNav) => {
 
   const renderCategoryItem = (itemData: any) => {
     const pressHandler = () => {
-      navigation.navigate('MealsOverViewScreen', { categoryId: itemData.item.id });
+      navigation.navigate('MealsOverView', { categoryId: itemData.item.id, title: itemData.item.title });
     }
     return (
       <CategoryGridTile
