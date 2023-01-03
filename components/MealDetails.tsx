@@ -6,13 +6,15 @@ interface MealDetailsProps {
   duration: number | undefined;
   complexity: string | undefined;
   affordAbility: string | undefined;
+  customStyle?: keyof unknown;
+  textStyle?: { color: string };
 }
-export const MealDetails = ({ duration, complexity, affordAbility }: MealDetailsProps) => {
+export const MealDetails = ({ duration, complexity, affordAbility, customStyle, textStyle }: MealDetailsProps) => {
   return (
-    <View style={styles.details}>
-      <Text style={styles.detailItem}>{duration}</Text>
-      <Text style={styles.detailItem}>{complexity}</Text>
-      <Text style={styles.detailItem}>{affordAbility}</Text>
+    <View style={[styles.details, customStyle]}>
+      <Text style={[styles.detailItem, textStyle]}>{duration}</Text>
+      <Text style={[styles.detailItem, textStyle]}>{complexity}</Text>
+      <Text style={[styles.detailItem, textStyle]}>{affordAbility}</Text>
     </View>
   )
 }
