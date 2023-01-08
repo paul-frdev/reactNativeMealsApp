@@ -1,15 +1,18 @@
+import { DrawerNavigationProp } from '@react-navigation/drawer';
 import { RouteProp } from "@react-navigation/native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
 export type RootStackParamList = {
+  Categories: undefined;
   MealsCategories: undefined;
+  Favorites: undefined;
   MealsOverView: { categoryId: string; title?: string };
   MealDetails: { mealId: string };
 };
 
 export type PropNav = NativeStackScreenProps<
   RootStackParamList,
-  "MealsCategories",
+  "Categories",
   "MealsOverView"
 >;
 export type ProfileScreenRouteProp = RouteProp<
@@ -19,6 +22,10 @@ export type ProfileScreenRouteProp = RouteProp<
 export type DetailsScreenProps = NativeStackScreenProps<
   RootStackParamList,
   "MealDetails"
+>;
+export type CategoriesScreenProps = DrawerNavigationProp<
+  RootStackParamList,
+  "Categories"
 >;
 
 export type DetailsScreenRouteProp = RouteProp<

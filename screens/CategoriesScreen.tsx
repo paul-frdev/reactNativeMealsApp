@@ -1,4 +1,4 @@
-import { FlatList, StyleSheet } from 'react-native'
+import { FlatList } from 'react-native'
 import { CategoryGridTile } from '../components/CategoryGridTile'
 import { CATEGORIES } from '../mocks/dummy-data'
 import { PropNav } from '../types';
