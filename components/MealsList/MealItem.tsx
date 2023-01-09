@@ -1,8 +1,8 @@
 import { useRoute } from '@react-navigation/native';
 import { Image, Platform, Pressable, StyleSheet, Text, View } from 'react-native'
-import { DetailsScreenProps, DetailsScreenRouteProp } from '../types';
+import { DetailsScreenProps, DetailsScreenRouteProp } from '../../types';
 import { useNavigation } from '@react-navigation/native';
-import { MealDetails } from './MealDetails';
+import { MealDetails } from '../MealDetails';
 
 interface MealItemProps {
   id: string;
