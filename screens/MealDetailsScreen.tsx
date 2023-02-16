@@ -22,7 +22,6 @@ export const MealDetailsScreen = ({ route, navigation }: DetailsScreenProps) => 
   const selectedMeal = MEALS.find((item: any) => item.id === mealId);
 
   const mealIsFavorite = favoriteMealsIds.includes(mealId);
-  console.log(favoriteMealsIds);
 
   const changeFavoriteStatusHandler = () => {
     if (mealIsFavorite) {

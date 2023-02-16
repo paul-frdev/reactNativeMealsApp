@@ -8,6 +8,7 @@ export type RootStackParamList = {
   Favorites: undefined;
   MealsOverView: { categoryId: string; title?: string };
   MealDetails: { mealId: string };
+  Notification: undefined;
 };
 
 export type PropNav = NativeStackScreenProps<
